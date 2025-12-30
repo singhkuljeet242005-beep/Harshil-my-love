@@ -11,3 +11,18 @@ function surprise(el) {
     el.style.transform = "scale(1)";
   }, 600);
 }
+const music = document.getElementById("bgMusic");
+const toggle = document.getElementById("musicToggle");
+
+let isPlaying = false;
+
+toggle.addEventListener("click", () => {
+  if (!isPlaying) {
+    music.play();
+    toggle.innerText = "🎶";
+  } else {
+    music.pause();
+    toggle.innerText = "🎵";
+  }
+  isPlaying = !isPlaying;
+});
