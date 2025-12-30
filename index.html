@@ -1,1 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For You ❤️</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+<!-- PAGE 1 -->
+<section class="page active" id="page1">
+  <h1>Hey You ❤️</h1>
+  <p>
+    This little world was built quietly,<br>
+    with you in mind.
+  </p>
+  <button onclick="goToPage(2)">Enter ✨</button>
+</section>
+
+<!-- PAGE 2 -->
+<section class="page" id="page2">
+  <h1>Happy New Year 🎆</h1>
+  <p class="poem">
+    Another year begins,<br>
+    and somehow,<br>
+    you’re still my favourite part of time.
+  </p>
+  <button onclick="goToPage(3)">Keep going 💫</button>
+</section>
+
+<!-- PAGE 3 -->
+<section class="page" id="page3">
+  <h1>Tap Around 👀</h1>
+  <p>Every click hides a little smile.</p>
+  <div class="heart-box">
+    <span onclick="surprise(this)">💖</span>
+    <span onclick="surprise(this)">💖</span>
+    <span onclick="surprise(this)">💖</span>
+  </div>
+  <button onclick="goToPage(4)">Next 🌷</button>
+</section>
+
+<!-- PAGE 4 -->
+<section class="page" id="page4">
+  <h1>Something I Never Say Enough</h1>
+  <p class="poem">
+    You make ordinary days softer.<br>
+    You make quiet moments feel full.<br>
+    And I hope you know—<br>
+    you matter, deeply.
+  </p>
+  <button onclick="goToPage(5)">One more thing 🤍</button>
+</section>
+
+<!-- PAGE 5 -->
+<section class="page" id="page5">
+  <h1>For Nights Like This 🌙</h1>
+  <p class="poem">
+    If the world ever feels loud,<br>
+    or lonely,<br>
+    remember—<br>
+    someone built this place<br>
+    just so you wouldn’t feel alone.
+  </p>
+  <button onclick="goToPage(6)">Final ✨</button>
+</section>
+
+<!-- PAGE 6 -->
+<section class="page" id="page6">
+  <h1>Always You ❤️</h1>
+  <p class="poem">
+    No matter the year.<br>
+    No matter the distance.<br>
+    I choose you—again and again.
+  </p>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
