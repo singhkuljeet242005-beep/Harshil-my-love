@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>For You ❤️</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
-  <!-- Floating Romantic Background -->
+  <!-- Soft floating background -->
   <div class="romantic-bg">
     <span></span>
     <span></span>
@@ -42,11 +44,13 @@
   <section class="page" id="page3">
     <h1>Tap Around 👀</h1>
     <p>Every click hides a little smile.</p>
+
     <div class="heart-box">
       <span onclick="surprise(this)">💖</span>
       <span onclick="surprise(this)">💖</span>
       <span onclick="surprise(this)">💖</span>
     </div>
+
     <button onclick="goToPage(4)">Next 🌷</button>
   </section>
 
@@ -85,15 +89,16 @@
     </p>
   </section>
 
+  <!-- Music Toggle -->
+  <div id="musicToggle">🎵</div>
+
   <!-- Background Music -->
+  <!-- IMPORTANT: file is in ROOT (same place as index.html) -->
   <audio id="bgMusic" loop>
     <source src="Jvke%20her.mp3" type="audio/mpeg">
   </audio>
 
-  <!-- Music Toggle Button -->
-  <div id="musicToggle">🎵</div>
-
-  <!-- Script -->
+  <!-- JS -->
   <script src="script.js"></script>
 
 </body>
