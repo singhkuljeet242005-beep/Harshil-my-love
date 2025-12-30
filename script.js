@@ -1,31 +1,41 @@
-const music = document.getElementById("bgMusic");
-const toggle = document.getElementById("musicToggle");
+document.addEventListener("DOMContentLoaded", () => {
 
-let isPlaying = false;
+  const music = document.getElementById("bgMusic");
+  const toggle = document.getElementById("musicToggle");
 
-toggle.addEventListener("click", () => {
-  if (!isPlaying) {
-    music.play();
-    toggle.innerText = "🎶";
-  } else {
-    music.pause();
-    toggle.innerText = "🎵";
-  }
-  isPlaying = !isPlaying;
+  let isPlaying = false;
+
+  // ===== MUSIC TOGGLE =====
+  toggle.addEventListener("click", () => {
+    if (!isPlaying) {
+      music.play().catch(() => {});
+      toggle.innerText = "🎶";
+    } else {
+      music.pause();
+      toggle.innerText = "🎵";
+    }
+    isPlaying = !isPlaying;
+  });
+
+  // ===== PAGE NAVIGATION =====
+  window.goToPage = function(pageNumber) {
+    const current = document.querySelector(".page.active");
+    const next = document.getElementById(`page${pageNumber}`);
+
+    if (current && next) {
+      current.classList.remove("active");
+      next.classList.add("active");
+    }
+  };
+
+  // ===== CUTE SURPRISE =====
+  window.surprise = function(el) {
+    el.innerText = "💫";
+    el.style.transform = "scale(1.5)";
+    setTimeout(() => {
+      el.innerText = "💖";
+      el.style.transform = "scale(1)";
+    }, 600);
+  };
+
 });
-
-// Page navigation
-function goToPage(pageNumber) {
-  document.querySelector('.page.active').classList.remove('active');
-  document.getElementById(`page${pageNumber}`).classList.add('active');
-}
-
-// Cute surprise effect
-function surprise(el) {
-  el.innerText = "💫";
-  el.style.transform = "scale(1.5)";
-  setTimeout(() => {
-    el.innerText = "💖";
-    el.style.transform = "scale(1)";
-  }, 600);
-}
