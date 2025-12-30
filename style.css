@@ -96,3 +96,23 @@ button:hover {
 .page.active {
   animation: float 4s ease-in-out infinite;
 }
+#musicToggle {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 55px;
+  height: 55px;
+  background: rgba(255,255,255,0.7);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4rem;
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+#musicToggle:hover {
+  transform: scale(1.1);
+}
